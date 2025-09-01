@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experts-Amazon | خبراء البيع على أمازون في السعودية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #111827; /* Dark background */
+            scroll-behavior: smooth;
+        }
+        /* Custom Colors */
+        .bg-brand-dark { background-color: #111827; }
+        .bg-brand-card { background-color: #1F2937; }
+        .text-brand-gold { color: #FF8E31; }
+        .bg-brand-gold { background-color: #FF8E31; }
+        .hover\:bg-brand-gold-dark:hover { background-color: #E87A1C; }
+        .border-brand-gold { border-color: #FF8E31; }
+        .border-brand-gray { border-color: #374151; }
+        
+        .hero-bg {
+            background-color: #111827;
+            background-image: radial-gradient(circle at 1px 1px, #374151 1px, transparent 0);
+            background-size: 25px 25px;
+        }
+
+        .section-fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .section-fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .loader {
+            border: 4px solid #374151;
+            border-top: 4px solid #FF8E31;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-200 rtl">
+
+    <!-- Header -->
+    <header id="header" class="bg-brand-card/80 backdrop-blur-sm shadow-lg sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4 space-x-reverse">
+                <h1 class="text-2xl font-bold text-white">Experts-Amazon</h1>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 space-x-reverse">
+                <a href="#services" class="text-gray-300 hover:text-brand-gold transition">خدماتنا</a>
+                <a href="#growth-chart" class="text-gray-300 hover:text-brand-gold transition">مؤشرات النمو</a>
+                <a href="#partners" class="text-gray-300 hover:text-brand-gold transition">شركاؤنا</a>
+                <a href="#gemini-tool" class="text-gray-300 hover:text-brand-gold transition">أداة AI</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-brand-gold transition">آراء العملاء</a>
+                <a href="https://wa.me/966503439983" target="_blank" class="bg-brand-gold text-gray-900 px-5 py-2 rounded-lg font-bold hover:bg-brand-gold-dark transition shadow-md">إبدأ الآن</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 border-t border-brand-gray">
+            <a href="#services" class="block py-2 text-gray-300 hover:text-brand-gold">خدماتنا</a>
+            <a href="#growth-chart" class="block py-2 text-gray-300 hover:text-brand-gold">مؤشرات النمو</a>
+            <a href="#partners" class="block py-2 text-gray-300 hover:text-brand-gold">شركاؤنا</a>
+            <a href="#gemini-tool" class="block py-2 text-gray-300 hover:text-brand-gold">أداة AI</a>
+            <a href="#testimonials" class="block py-2 text-gray-300 hover:text-brand-gold">آراء العملاء</a>
+            <a href="https://wa.me/966503439983" target="_blank" class="block mt-2 bg-brand-gold text-gray-900 text-center px-5 py-2 rounded-lg font-bold hover:bg-brand-gold-dark">إبدأ الآن</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero-bg text-white pt-24 pb-40">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-4xl mx-auto section-fade-in">
+                    <h1 class="text-4xl md:text-6xl font-black leading-tight mb-4">ابدأ رحلتك للبيع على أمازون مع <span class="text-brand-gold">خبراء السوق السعودي</span></h1>
+                    <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto">نوفر لك المعرفة، الأدوات، والاستراتيجيات المطلوبة لتحقيق مبيعاتك وتخطي منافسيك. حلول مطورة، آمنة ومضمونة.</p>
+                    <a href="https://wa.me/966503439983" target="_blank" class="bg-brand-gold text-gray-900 px-10 py-4 rounded-lg text-lg font-extrabold hover:bg-brand-gold-dark transition-transform transform hover:scale-105 shadow-xl inline-block">اطلب استشارتك المجانية</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners Section -->
+        <section id="partners" class="py-20 bg-brand-card">
+            <div class="container mx-auto px-6 section-fade-in">
+                <h2 class="text-center text-white text-2xl md:text-3xl font-extrabold uppercase tracking-wider mb-12">شركاء نفخر بنجاحهم معنا</h2>
+                <div class="flex flex-wrap justify-center items-center gap-8">
+                    <!-- Partner Logo: Ulefone -->
+                    <div class="w-48 h-24 p-2 bg-white rounded-lg flex justify-center items-center transition-all duration-300 grayscale hover:grayscale-0 hover:scale-105 hover:shadow-2xl hover:shadow-brand-gold/20">
+                        <img src="https://i.postimg.cc/Y2TzrNMb/temp-Imageb7-Yy-OC.avif" alt="شعار Ulefone" class="max-w-full max-h-full object-contain">
+                    </div>
+                    <!-- Partner Logo: Konoz H -->
+                    <div class="w-48 h-24 p-2 bg-white rounded-lg flex justify-center items-center transition-all duration-300 grayscale hover:grayscale-0 hover:scale-105 hover:shadow-2xl hover:shadow-brand-gold/20">
+                        <img src="https://i.postimg.cc/G902Wm0x/temp-Image-FMnp3-A.avif" alt="شعار كنوز اتش" class="max-w-full max-h-full object-contain">
+                    </div>
+                    <!-- Partner Logo: Hairless -->
+                    <div class="w-48 h-24 p-2 bg-white rounded-lg flex justify-center items-center transition-all duration-300 grayscale hover:grayscale-0 hover:scale-105 hover:shadow-2xl hover:shadow-brand-gold/20">
+                        <img src="https://i.postimg.cc/nVX1fSbX/temp-Imageg7g-Gba.avif" alt="شعار Hairless" class="max-w-full max-h-full object-contain">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 section-fade-in">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-4">خدماتنا المصممة لنجاحك</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">منصة متكاملة من الحلول الاحترافية لإطلاق وتنمية أعمالك على أمازون.</p>
+                </div>
+                <div class="flex flex-wrap justify-center items-stretch gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-brand-card p-8 rounded-2xl border border-brand-gray shadow-2xl hover:border-brand-gold hover:-translate-y-2 transition-all duration-300 section-fade-in flex flex-col items-center text-center md:basis-[45%] lg:basis-[30%]">
+                        <div class="bg-brand-dark p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 border-2 border-brand-gray">
+                             <svg class="w-8 h-8 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">دورة البيع على أمازون</h3>
+                        <p class="text-gray-400">دورة متكاملة تعلمك كل شيء عن البيع في أمازون من الصفر حتى الاحتراف.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-brand-card p-8 rounded-2xl border border-brand-gray shadow-2xl hover:border-brand-gold hover:-translate-y-2 transition-all duration-300 section-fade-in flex flex-col items-center text-center md:basis-[45%] lg:basis-[30%]">
+                         <div class="bg-brand-dark p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 border-2 border-brand-gray">
+                            <svg class="w-8 h-8 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">إدارة حسابك بالكامل</h3>
+                        <p class="text-gray-400">يقوم خبرائنا بإدارة حسابك ومتابعة المبيعات وتحسين المنتجات بما يضمن لك أعلى ربح.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-brand-card p-8 rounded-2xl border border-brand-gray shadow-2xl hover:border-brand-gold hover:-translate-y-2 transition-all duration-300 section-fade-in flex flex-col items-center text-center md:basis-[45%] lg:basis-[30%]">
+                         <div class="bg-brand-dark p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 border-2 border-brand-gray">
+                            <svg class="w-8 h-8 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8l2-2m0 0l2 2m-2-2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v12m0 0h2m-4-2h.01M12 12h.01M8 12h.01M8 16h.01M12 16h.01M16 16h.01"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">استشارات هاتفية مخصصة</h3>
+                        <p class="text-gray-400">استشارة مع خبير في التجارة الإلكترونية، نجيب على جميع استفساراتك ونرسم لك الطريق.</p>
+                    </div>
+                    <!-- Service Card 4 -->
+                    <div class="bg-brand-card p-8 rounded-2xl border border-brand-gray shadow-2xl hover:border-brand-gold hover:-translate-y-2 transition-all duration-300 section-fade-in flex flex-col items-center text-center md:basis-[45%] lg:basis-[30%]">
+                         <div class="bg-brand-dark p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 border-2 border-brand-gray">
+                             <svg class="w-8 h-8 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">إضافة وتسويق المنتجات</h3>
+                        <p class="text-gray-400">ندرج منتجك باحترافية وندير الحملات الإعلانية لضمان ظهورك في الصفحات الأولى.</p>
+                    </div>
+                     <!-- Service Card 5 -->
+                     <div class="bg-brand-card p-8 rounded-2xl border border-brand-gray shadow-2xl hover:border-brand-gold hover:-translate-y-2 transition-all duration-300 section-fade-in flex flex-col items-center text-center md:basis-[45%] lg:basis-[30%]">
+                          <div class="bg-brand-dark p-4 rounded-full w-16 h-16 flex items-center justify-center mb-6 border-2 border-brand-gray">
+                             <svg class="w-8 h-8 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-white">فريق تسويق متخصص</h3>
+                        <p class="text-gray-400">أكثر من 20 خبيرًا مختصًا في إطلاق وإدارة الحملات الإعلانية المدفوعة على منصة أمازون.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Growth Chart Section -->
+        <section id="growth-chart" class="py-24 bg-brand-card">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 section-fade-in">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-4">شهادة الأرقام: نمو استثنائي لشركائنا</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">نحن لا نعد بالنجاح، بل نصنعه. شاهد القفزة النوعية في مبيعات عملائنا بعد تطبيق استراتيجياتنا المتخصصة.</p>
+                </div>
+                <div class="max-w-5xl mx-auto p-4 md:p-8 bg-brand-dark rounded-2xl border border-brand-gray shadow-2xl section-fade-in">
+                    <canvas id="salesChart" style="height: 450px;"></canvas>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Gemini AI Tool Section -->
+        <section id="gemini-tool" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 section-fade-in">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-4">جرّب أداتنا الذكية المجانية</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">اكتب اسم منتجك وأهم مميزاته، ودع الذكاء الاصطناعي يكتب لك وصفاً احترافياً وجذاباً لمتجرك على أمازون.</p>
+                </div>
+                <div class="max-w-2xl mx-auto section-fade-in">
+                    <div class="space-y-4">
+                        <div>
+                            <label for="productName" class="block text-sm font-medium text-gray-300 mb-2">اسم المنتج</label>
+                            <input type="text" id="productName" class="w-full bg-brand-dark border border-brand-gray rounded-lg p-3 text-white focus:ring-brand-gold focus:border-brand-gold" placeholder="مثال: ساعة يد ذكية مقاومة للماء">
+                        </div>
+                        <div>
+                            <label for="productKeywords" class="block text-sm font-medium text-gray-300 mb-2">كلمات مفتاحية (المميزات)</label>
+                            <input type="text" id="productKeywords" class="w-full bg-brand-dark border border-brand-gray rounded-lg p-3 text-white focus:ring-brand-gold focus:border-brand-gold" placeholder="مثال: بطارية طويلة، شاشة لمس، قياس نبضات القلب">
+                        </div>
+                        <button id="generateBtn" class="w-full bg-brand-gold text-gray-900 px-8 py-3 rounded-lg text-lg font-extrabold hover:bg-brand-gold-dark transition-transform transform hover:scale-105 shadow-xl flex items-center justify-center">
+                            <span id="btn-text">✨ توليد وصف احترافي</span>
+                            <div id="loader" class="loader hidden"></div>
+                        </button>
+                    </div>
+                    <div id="result-container" class="mt-8 bg-brand-dark border border-brand-gray rounded-2xl p-6 hidden">
+                         <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-xl font-bold text-brand-gold">الوصف المقترح</h3>
+                            <button id="copyBtn" class="text-sm bg-gray-600 hover:bg-gray-500 text-white font-bold py-1 px-3 rounded-md">نسخ</button>
+                        </div>
+                        <div id="gemini-result" class="text-gray-300 whitespace-pre-wrap"></div>
+                    </div>
+                     <div id="error-message" class="mt-4 text-center text-red-400 hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section id="stats" class="py-24 bg-brand-card">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 section-fade-in">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-3">بالأرقام.. نفخر بإنجازاتنا</h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">النتائج هي لغة الخبراء. انضم إلى قائمة شركاء النجاح.</p>
+                </div>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                    <!-- Stat Card -->
+                    <div class="bg-brand-dark p-8 rounded-2xl section-fade-in">
+                        <h3 class="text-5xl font-black text-brand-gold" data-target="5">0</h3>
+                        <p class="text-gray-400 mt-2 text-lg">سنوات من الخبرة</p>
+                    </div>
+                    <div class="bg-brand-dark p-8 rounded-2xl section-fade-in">
+                        <h3 class="text-5xl font-black text-brand-gold" data-target="300">0</h3>
+                        <p class="text-gray-400 mt-2 text-lg">عميل وشريك نجاح</p>
+                    </div>
+                    <div class="bg-brand-dark p-8 rounded-2xl section-fade-in">
+                        <h3 class="text-5xl font-black text-brand-gold" data-target="98">0</h3>
+                        <p class="text-gray-400 mt-2 text-lg">% نسبة رضا العملاء</p>
+                    </div>
+                    <div class="bg-brand-dark p-8 rounded-2xl section-fade-in">
+                        <h3 class="text-5xl font-black text-brand-gold" data-target="50000">0</h3>
+                        <p class="text-gray-400 mt-2 text-lg">+ دقيقة استشارات</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 section-fade-in">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-3">شهادات نعتز بها</h2>
+                    <p class="text-gray-400">آراء عملائنا هي الدافع الأكبر لتميزنا المستمر.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Testimonial Card 1 -->
+                    <div class="bg-brand-card p-8 rounded-2xl border border-brand-gray section-fade-in relative overflow-hidden">
+                        <p class="text-gray-300 mb-6 text-lg relative z-10">"الله يعطيك العافيه مرا م قصرت وشرح واضح جدا وبالتفصيل واعطانا كل اسرار امازون .. ومتجاوب وسريع بالرد كل الشكر لك استاذ مشعل ✨"</p>
+                        <div class="flex items-center pt-4 border-t border-brand-gray relative z-10">
+                             <div class="w-12 h-12 rounded-full bg-brand-dark border-2 border-brand-gray flex-shrink-0 flex items-center justify-center ml-4">
+                                <svg class="w-6 h-6 text-brand-gold" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">متجر جمان</h4>
+                                <p class="text-sm text-gray-400">Jomaan Baby Shop</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Testimonial Card 2 -->
+                     <div class="bg-brand-card p-8 rounded-2xl border border-brand-gray section-fade-in relative overflow-hidden">
+                        <p class="text-gray-300 mb-6 text-lg relative z-10">"قسم بالله دخلت دورة مع الاخ مشعل والله استفدت وعرفت حاجات كنت اتمنى اعرفها الان ببدأ كتاجر في امازون."</p>
+                        <div class="flex items-center pt-4 border-t border-brand-gray relative z-10">
+                           <div class="w-12 h-12 rounded-full bg-brand-dark border-2 border-brand-gray flex-shrink-0 flex items-center justify-center ml-4">
+                                <svg class="w-6 h-6 text-brand-gold" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">عميل مميز</h4>
+                                <p class="text-sm text-gray-400">تاجر على أمازون</p>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Testimonial Card 3 -->
+                     <div class="bg-brand-card p-8 rounded-2xl border border-brand-gray section-fade-in relative overflow-hidden">
+                        <p class="text-gray-300 mb-6 text-lg relative z-10">"سجلو وانتو مغمضيين شخص متمكن وأمين وحريص، ما تلاقون مثله."</p>
+                        <div class="flex items-center pt-4 border-t border-brand-gray relative z-10">
+                           <div class="w-12 h-12 rounded-full bg-brand-dark border-2 border-brand-gray flex-shrink-0 flex items-center justify-center ml-4">
+                                <svg class="w-6 h-6 text-brand-gold" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white">رائد أعمال</h4>
+                                <p class="text-sm text-gray-400">مؤسس علامة تجارية</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-brand-card">
+            <div class="container mx-auto px-6 text-center">
+                <div class="max-w-3xl mx-auto section-fade-in">
+                    <h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-brand-gold">مستعد لتحويل متجرك على أمازون إلى قصة نجاح؟</h2>
+                    <p class="text-gray-300 mb-10 text-lg">لا تتردد. تواصل معنا اليوم لتحصل على استشارة مجانية من خبراء السوق السعودي، ودعنا نبني نجاحك معاً.</p>
+                    <a href="https://wa.me/966503439983" target="_blank" class="bg-brand-gold text-gray-900 px-10 py-4 rounded-lg text-lg font-extrabold hover:bg-brand-gold-dark transition-transform transform hover:scale-105 shadow-xl inline-block">تواصل معنا الآن</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark py-8 border-t border-brand-gray">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2025 جميع الحقوق محفوظة لـ Experts-Amazon.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.section-fade-in').forEach(el => {
+                observer.observe(el);
+            });
+
+            // --- Chart.js Implementation ---
+            const chartObserver = new IntersectionObserver((entries, obs) => {
+                const entry = entries[0];
+                if (entry.isIntersecting) {
+                    renderSalesChart();
+                    obs.unobserve(entry.target);
+                }
+            }, { threshold: 0.5 });
+
+            const chartCanvas = document.getElementById('salesChart');
+            if(chartCanvas) {
+                chartObserver.observe(chartCanvas);
+            }
+            
+            function renderSalesChart() {
+                const ctx = chartCanvas.getContext('2d');
+                
+                const salesGradient = ctx.createLinearGradient(0, 0, 0, 450);
+                salesGradient.addColorStop(0, 'rgba(255, 142, 49, 0.5)');
+                salesGradient.addColorStop(1, 'rgba(255, 142, 49, 0)');
+
+                const salesData = [12000, 19000, 25000, 31000, 42000, 58000, 65000, 75000, 88000, 105000, 120000, 145000];
+                const adSpendData = [1500, 2200, 2800, 3500, 4100, 4800, 5500, 6200, 7000, 8200, 9500, 11000];
+
+
+                const salesChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
+                        datasets: [
+                        {
+                            label: 'متوسط المبيعات (ريال)',
+                            data: salesData,
+                            backgroundColor: salesGradient,
+                            borderColor: '#FF8E31',
+                            borderWidth: 3,
+                            pointBackgroundColor: '#FF8E31',
+                            pointBorderColor: '#111827',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: '#FF8E31',
+                            pointRadius: 5,
+                            pointBorderWidth: 2,
+                            tension: 0.4,
+                            fill: true,
+                        },
+                        {
+                            label: 'تكلفة الإعلانات (ريال)',
+                            data: adSpendData,
+                            backgroundColor: 'transparent',
+                            borderColor: '#6B7280',
+                            borderWidth: 2,
+                            pointBackgroundColor: '#6B7280',
+                            pointRadius: 5,
+                            tension: 0.4,
+                            borderDash: [5, 5],
+                            fill: false,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        animation: {
+                            duration: 2000,
+                            easing: 'easeInOutQuart'
+                        },
+                        plugins: {
+                            legend: {
+                                display: true,
+                                position: 'bottom',
+                                labels: {
+                                    color: '#D1D5DB',
+                                    font: { size: 14, family: 'Tajawal' },
+                                    padding: 20,
+                                    usePointStyle: true,
+                                    pointStyle: 'circle'
+                                }
+                            },
+                             tooltip: {
+                                mode: 'index',
+                                intersect: false,
+                                backgroundColor: '#111827',
+                                titleFont: { size: 16, family: 'Tajawal' },
+                                bodyFont: { size: 14, family: 'Tajawal' },
+                                padding: 12,
+                                cornerRadius: 8,
+                                displayColors: true,
+                                borderColor: '#374151',
+                                borderWidth: 1,
+                                callbacks: {
+                                    label: function(context) {
+                                        let label = context.dataset.label || '';
+                                        if (label) {
+                                            label += ': ';
+                                        }
+                                        if (context.parsed.y !== null) {
+                                            label += new Intl.NumberFormat('ar-SA', { style: 'currency', currency: 'SAR' }).format(context.parsed.y);
+                                        }
+                                        return label;
+                                    }
+                                }
+                            },
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    color: '#9CA3AF',
+                                    font: { size: 12, family: 'Tajawal' },
+                                    callback: function(value) {
+                                        if (value >= 1000) return value / 1000 + ' ألف';
+                                        return value;
+                                    }
+                                },
+                                grid: {
+                                    color: '#374151'
+                                }
+                            },
+                            x: {
+                                ticks: {
+                                    color: '#9CA3AF',
+                                    font: { size: 12, family: 'Tajawal' }
+                                },
+                                grid: {
+                                    display: false
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+
+            // Separate observer for the stats section to only fire once
+            const statsObserver = new IntersectionObserver((entries, obs) => {
+                 entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateNumbers();
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            const statsSection = document.getElementById('stats');
+            if(statsSection) {
+                statsObserver.observe(statsSection);
+            }
+
+
+            // Animate numbers on scroll
+            function animateNumbers() {
+                document.querySelectorAll('#stats h3').forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    const duration = 2000;
+                    const startTime = performance.now();
+
+                    const step = (currentTime) => {
+                        const elapsedTime = currentTime - startTime;
+                        const progress = Math.min(elapsedTime / duration, 1);
+                        counter.innerText = Math.floor(progress * target).toLocaleString('ar-EG');
+                        if (progress < 1) {
+                            requestAnimationFrame(step);
+                        } else {
+                            counter.innerText = target.toLocaleString('ar-EG');
+                        }
+                    };
+                    requestAnimationFrame(step);
+                });
+            }
+
+            // Gemini API functionality
+            const generateBtn = document.getElementById('generateBtn');
+            const resultContainer = document.getElementById('result-container');
+            const geminiResultDiv = document.getElementById('gemini-result');
+            const errorMessageDiv = document.getElementById('error-message');
+            const loader = document.getElementById('loader');
+            const btnText = document.getElementById('btn-text');
+            const copyBtn = document.getElementById('copyBtn');
+
+            generateBtn.addEventListener('click', async () => {
+                const productName = document.getElementById('productName').value;
+                const productKeywords = document.getElementById('productKeywords').value;
+
+                if (!productName || !productKeywords) {
+                    showError('الرجاء إدخال اسم المنتج والمميزات.');
+                    return;
+                }
+                
+                toggleLoading(true);
+
+                const systemPrompt = "You are an expert Amazon copywriter specializing in the Saudi Arabian market. Your goal is to create compelling, SEO-friendly product listings in Arabic. The output should be professional and persuasive.";
+                const userQuery = `اكتب وصف منتج احترافي لمنصة أمازون السعودية.\nاسم المنتج: ${productName}\nالمميزات والكلمات المفتاحية: ${productKeywords}\n\nالناتج يجب أن يكون بالتنسيق التالي:\n- عنوان جذاب\n- 5 نقاط رئيسية (bullet points) تبدأ كل نقطة برمز تعبيري مناسب.\n- فقرة وصفية قصيرة (لا تزيد عن 3-4 أسطر).`;
+                
+                try {
+                    const result = await callGeminiAPI(systemPrompt, userQuery);
+                    displayResult(result);
+                } catch (error) {
+                    console.error("Error calling Gemini API:", error);
+                    showError('حدث خطأ أثناء إنشاء الوصف. الرجاء المحاولة مرة أخرى.');
+                } finally {
+                    toggleLoading(false);
+                }
+            });
+
+            copyBtn.addEventListener('click', () => {
+                const textToCopy = geminiResultDiv.innerText;
+                const textArea = document.createElement("textarea");
+                textArea.value = textToCopy;
+                document.body.appendChild(textArea);
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    copyBtn.textContent = 'تم النسخ!';
+                    setTimeout(() => { copyBtn.textContent = 'نسخ'; }, 2000);
+                } catch (err) {
+                    console.error('Failed to copy text: ', err);
+                }
+                document.body.removeChild(textArea);
+            });
+
+            async function callGeminiAPI(systemPrompt, userQuery) {
+                const apiKey = ""; // Canvas will provide the key
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+                const payload = {
+                    contents: [{ parts: [{ text: userQuery }] }],
+                    systemInstruction: { parts: [{ text: systemPrompt }] },
+                };
+                
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) throw new Error(`API call failed: ${response.status}`);
+
+                const result = await response.json();
+                const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
+
+                if (text) {
+                     return text;
+                } else {
+                    throw new Error("Invalid response structure from API.");
+                }
+            }
+            
+            function displayResult(text) {
+                geminiResultDiv.innerText = text;
+                resultContainer.classList.remove('hidden');
+                errorMessageDiv.classList.add('hidden');
+            }
+
+            function showError(message) {
+                 errorMessageDiv.textContent = message;
+                 errorMessageDiv.classList.remove('hidden');
+                 resultContainer.classList.add('hidden');
+            }
+
+            function toggleLoading(isLoading) {
+                btnText.classList.toggle('hidden', isLoading);
+                loader.classList.toggle('hidden', !isLoading);
+                generateBtn.disabled = isLoading;
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
